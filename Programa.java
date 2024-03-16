@@ -8,6 +8,10 @@ public class Programa {
                 Exercicio01.executar();
                 break;
 
+            case 2:
+                Exercicio02.executar();
+                break;
+
         default:
             System.out.println("Exercício não encontrado!");
             break;
