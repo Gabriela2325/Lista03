@@ -36,6 +36,10 @@ public class Programa {
             Exercicio08.executar();
             break;
 
+        case 9:
+            Exercicio09.executar();
+            break;
+
         default:
             System.out.println("Exercício não encontrado!");
             break;
