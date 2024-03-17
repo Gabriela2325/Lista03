@@ -100,6 +100,10 @@ public class Programa {
             Exercicio24.executar();
             break;
 
+        case 25:
+            Exercicio25.executar();
+            break;
+
         default:
             System.out.println("Exercício não encontrado!");
             break;
