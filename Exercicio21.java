@@ -27,7 +27,7 @@ public class Exercicio21 {
         } else if (idade >= 18 && idade <= 25) {
             return "Sênior";
         } else {
-            return "Idade fora da faixa etária";
+            return "Fora da faixa etária";
         }
     }
 }        
