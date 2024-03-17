@@ -11,14 +11,14 @@ public class Exercicio26 {
     // Caso aidade não esteja na faixa necessária, 
     //imprimir uma mensagem informando que ele não se enquadraem nenhuma das categorias ofertadas
 
-    String nome = Prompt.lerLinha("Digite o nome do pretendente: ");
+    String pretendente = Prompt.lerLinha("Digite o nome do pretendente: ");
         int idade = Prompt.lerInteiro("Digite a idade do pretendente: ");
         String grupoRisco = Prompt.lerLinha("Digite o grupo de risco do pretendente (baixo, médio ou alto): ");
 
         String categoria = determinarCategoriaSeguro(idade, grupoRisco);
 
         if (categoria != null) {
-            System.out.println("Nome do pretendente: " + nome);
+            System.out.println("Nome do pretendente: " + pretendente);
             System.out.println("Idade do pretendente: " + idade);
             System.out.println("Grupo de risco do pretendente: " + grupoRisco);
             System.out.println("Categoria de seguro: " + categoria);
