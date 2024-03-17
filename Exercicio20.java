@@ -1,14 +1,12 @@
-public class Exercicio19 {
+public class Exercicio20 {
     public static void executar(){
 
-    System.out.println("Exercicio19");
+    System.out.println("Exercicio20");
 
-    //19. Escrever um programa que leia três valores inteiros e verifique se eles podem ser os lados deum triângulo.
-    // Se forem, informar qual o tipo de triângulo que eles formam: equilátero, isóscele ouescaleno.Propriedade:
-    // o comprimento de cada lado de um triângulo é menor do que a soma doscomprimentos dos outros dois lados.
-    //Triângulo Equilátero: aquele que tem os comprimentos dos três lados iguais;Triângulo Isóscele: 
-    //aquele que tem os comprimentos de dois lados iguais. Portanto, todotriângulo equilátero é também isóscele;
-    //Triângulo Escaleno: aquele que tem os comprimentos de seus três lados diferentes
+    //20. A escola “APRENDER” faz o pagamento de seus professores por hora/aula.
+    //Faça um programaque calcule e exiba o salário de um professor.
+    // Sabe-se que o valor da hora/aula segue a tabelaabaixo:Professor 
+    //Nível 1 R$12,00 por hora/aulaProfessor Nível 2 R$17,00 por hora/aulaProfessor Nível 3 R$25,00 por hora/aula
 
     int lado1 = Prompt.lerInteiro("Digite o comprimento do primeiro lado: ");
     int lado2 = Prompt.lerInteiro("Digite o comprimento do segundo lado: ");
