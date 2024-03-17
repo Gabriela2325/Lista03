@@ -13,7 +13,7 @@ public class Exercicio17 {
 
     double salarioMinimo = Prompt.lerDecimal("Digite o valor do salário mínimo: ");
 
-    double novoSalario = calcularNovoSalario(salarioFuncionario, salarioMinimo);
+    double novoSalario = CalcularNovoSalario(salarioFuncionario, salarioMinimo);
 
     System.out.println("Nome do funcionário: " + nomeFuncionario);
     System.out.println("Reajuste: " + (novoSalario - salarioFuncionario));
@@ -23,7 +23,7 @@ public class Exercicio17 {
     System.out.println("Aumento na folha de pagamento da empresa: " + aumentoFolha);
     }
 
-    public static double calcularNovoSalario(double salario, double salarioMinimo) {
+    public static double CalcularNovoSalario(double salario, double salarioMinimo) {
         if (salario < 3 * salarioMinimo) {
             return salario * 1.5; 
         } else if (salario >= 3 * salarioMinimo && salario <= 10 * salarioMinimo) {
