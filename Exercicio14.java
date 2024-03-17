@@ -42,8 +42,6 @@ public class Exercicio14 {
         System.out.println("Total de produtos com lucro: " + Lucro);
         System.out.println("Total de produtos com prejuízo: " + Prejuizo);
         System.out.println("Total de produtos com empate: " + Empate);
-
-
     }
 }
 
