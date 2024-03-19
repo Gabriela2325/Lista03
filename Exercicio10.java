@@ -7,16 +7,10 @@ public class Exercicio10 {
         // “maior de idade” e “menor de idade” para cada pessoa.
         // Considerar a pessoa com 18anos como maior de idade.
 
-        int pessoas = Prompt.lerInteiro("Digite a quantidade de pessoas: ");
+        int quantidade = Prompt.lerInteiro("Digite a quantidade de pessoas: ");
 
-        for (int i = 0; i < pessoas; i++) {
-            int idade = Prompt.lerInteiro("Digite a idade da pessoa " + (i + 1) + ": ");
+        Pessoa10 pessoas = new Pessoa10(quantidade);
 
-            if (idade >= 18) {
-                System.out.println("Pessoa " + (i + 1) + ": Maior de idade");
-            } else {
-                System.out.println("Pessoa " + (i + 1) + ": Menor de idade");
-            }
-        }
+        pessoas.verificarIdades();
     }
 }
