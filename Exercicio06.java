@@ -7,9 +7,11 @@ public class Exercicio06 {
         // Sabe-se que o preço de custo receberá um acréscimo de acordo com um percentual informado pelousuário.
 
         double custo = Prompt.lerDecimal("Digite o preço de custo do produto: ");
-
         double acrescimo = Prompt.lerDecimal("Digite o percentual de acréscimo (%): ");
 
-        System.out.println("O valor de venda do produto é de: R$ " + (custo * ( 1 + acrescimo / 100)));
+        Produto06 produto = new Produto06(custo);
+        double precoVenda = produto.calcularPrecoVenda(acrescimo);
+
+        System.out.println("O valor de venda do produto é de: R$ " + precoVenda);
     }
 }
