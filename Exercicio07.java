@@ -9,18 +9,12 @@ public class Exercicio07 {
         // Escrever um programa que leia o custo de fábrica de um carro e informeo custo ao consumidor do mesmo.
 
         double custoFabrica = Prompt.lerDecimal("Digite o custo de fábrica do carro: ");
-    
-        double percentagemD = 0.28;
+        double percentagemDistribuidor = 0.28;
         double impostos = 0.45;
-    
-        double valrImpostos = impostos * custoFabrica;
-    
-        double custoIntermediario = custoFabrica + valrImpostos;
-    
-        double valorDistribuidor = percentagemD * custoIntermediario;
-    
-        double custoConsumidor = custoIntermediario + valorDistribuidor;
-    
+
+        Carro07 carro = new Carro07(custoFabrica, percentagemDistribuidor, impostos);
+        double custoConsumidor = carro.calcularCustoConsumidor();
+
         System.out.println("O custo ao consumidor do carro é de: R$ " + custoConsumidor);
     }
 }
