@@ -7,11 +7,11 @@ public class Exercicio04 {
         //lido em dólar (US$). O programa deverá solicitar o 
         //valor da cotação do dólar e também aquantidade de dólares disponíveis com o usuário
 
-        double cotacaoD = Prompt.lerDecimal("Digite a cotação do dólar R$/US$: ");
+        double cotacao = Prompt.lerDecimal("Digite a cotação do dólar: ");
+        double quantidade = Prompt.lerDecimal("Digite a quantidade de dólares disponíveis: ");
 
-        double quantidadeD = Prompt.lerDecimal("Digite a quantidade de dólares disponíveis: ");
+        Conversor04 conversor = new Conversor04(cotacao, quantidade);
 
-        System.out.println("Valor em reais da quantidade de dólares disponíveis: R$ " + cotacaoD * quantidadeD);
-
+        System.out.println(conversor);
     }
 }
