@@ -11,10 +11,13 @@ public class Exercicio01 {
         double nota1 = Prompt.lerDecimal("Digite a nota da 1° prova: ");
         double nota2 = Prompt.lerDecimal("Digite a nota da 2° prova: ");
         double nota3 = Prompt.lerDecimal("Digite a nota da 3° prova: ");
- 
-        double media = (nota1 + nota2 + nota3) / 3;
 
-        System.out.println("Nome do aluno: " + nomeAluno);
-        System.out.println("Média: " + media);
+        Aluno01 aluno01 = new Aluno01(nomeAluno, nota1, nota2, nota3);
+
+        System.out.println(aluno01.toString());
+    
     }
 }
+
+    
+

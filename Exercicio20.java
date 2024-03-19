@@ -9,25 +9,26 @@ public class Exercicio20 {
     //Nível 1 R$12,00 por hora/aulaProfessor Nível 2 R$17,00 por hora/aulaProfessor
     // Nível 3 R$25,00 por hora/aula
 
-    int lado1 = Prompt.lerInteiro("Digite o comprimento do primeiro lado: ");
-    int lado2 = Prompt.lerInteiro("Digite o comprimento do segundo lado: ");
-    int lado3 = Prompt.lerInteiro("Digite o comprimento do terceiro lado: ");
+    int htrabalhadas = 40;
+    int nivelp = 2;
+    double salario;
+    
+    switch (nivelp) {
+        case 1:
+            salario = htrabalhadas * 12.00;
+            break;
+        case 2:
+            salario = htrabalhadas * 17.00;
+            break;
+        case 3:
+            salario = htrabalhadas * 25.00;
+            break;
+        default:
+            System.out.println("Nível de professor inválido.");
+            return;
+    }
 
-    if (Triangulo(lado1, lado2, lado3)) {
-        if (lado1 == lado2 && lado2 == lado3) {
-            System.out.println("Os lados formam um triângulo equilátero.");
-        } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
-            System.out.println("Os lados formam um triângulo isósceles.");
-        } else {
-            System.out.println("Os lados formam um triângulo escaleno.");
-        }
-    } else {
-        System.out.println("Os lados não formam um triângulo.");
-    }
-    }
+    System.out.println("O salário do professor é: R$" + salario);
+}
 
-    public static boolean Triangulo(int lado1, int lado2, int lado3) {
-     
-        return (lado1 + lado2 > lado3) && (lado1 + lado3 > lado2) && (lado2 + lado3 > lado1);
-    }
 }        

@@ -12,12 +12,12 @@ public class Exercicio24 {
     double notaSemestral = Prompt.lerDecimal("Digite a nota da avaliação semestral (0 a 10): ");
     double notaExameFinal = Prompt.lerDecimal("Digite a nota do exame final (0 a 10): ");
 
-    double notaFinal = CalcularNotaFinal(notaLaboratorio, notaSemestral, notaExameFinal);
+    double notaFinal = Calcularnota(notaLaboratorio, notaSemestral, notaExameFinal);
 
     System.out.println("A nota final do estudante é: " + notaFinal);
     }
 
-    public static double CalcularNotaFinal(double notaLaboratorio, double notaSemestral, double notaExameFinal) {
+    public static double Calcularnota(double notaLaboratorio, double notaSemestral, double notaExameFinal) {
 
         double notaFinal = (notaLaboratorio * 2 + notaSemestral * 3 + notaExameFinal * 5) / 10;
         return notaFinal;

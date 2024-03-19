@@ -13,21 +13,21 @@ public class Exercicio26 {
 
     String pretendente = Prompt.lerLinha("Digite o nome do pretendente: ");
         int idade = Prompt.lerInteiro("Digite a idade do pretendente: ");
-        String grupoRisco = Prompt.lerLinha("Digite o grupo de risco do pretendente (baixo, médio ou alto): ");
+        String gruporisco = Prompt.lerLinha("Digite o grupo de risco do pretendente (baixo, médio ou alto): ");
 
-        String categoria = determinarCategoriaSeguro(idade, grupoRisco);
+        String categoria = Categoriaseguro(idade, gruporisco);
 
         if (categoria != null) {
             System.out.println("Nome do pretendente: " + pretendente);
             System.out.println("Idade do pretendente: " + idade);
-            System.out.println("Grupo de risco do pretendente: " + grupoRisco);
+            System.out.println("Grupo de risco do pretendente: " + gruporisco);
             System.out.println("Categoria de seguro: " + categoria);
         } else {
             System.out.println("O pretendente não se enquadra em nenhuma das categorias de seguro ofertadas.");
         }
     }
 
-    public static String determinarCategoriaSeguro(int idade, String grupoRisco) {
+    public static String Categoriaseguro(int idade, String grupoRisco) {
         
         if (idade < 17 || idade > 70) {
             return null;

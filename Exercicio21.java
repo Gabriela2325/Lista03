@@ -9,12 +9,12 @@ public class Exercicio21 {
 
     int idade = Prompt.lerInteiro("Digite a idade do nadador: ");
 
-    String categoria = classificarNadador(idade);
+    String categoria = Classificacao(idade);
 
     System.out.println("Categoria do nadador: " + categoria);
     }
 
-    public static String classificarNadador(int idade) {
+    public static String Classificacao(int idade) {
 
         if (idade >= 5 && idade <= 7) {
             return "Infantil A";

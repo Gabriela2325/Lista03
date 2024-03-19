@@ -11,15 +11,15 @@ public class Exercicio23 {
     double altura = Prompt.lerDecimal("Digite a altura da pessoa em metros: ");
     int idade = Prompt.lerInteiro("Digite a idade da pessoa: ");
 
-    double pesoIdeal = calcularPesoIdeal(sexo, altura, idade);
+    double pesoIdeal = calcularPI(sexo, altura, idade);
 
     System.out.println("Nome da pessoa: " + nome);
     System.out.println("Peso ideal: " + pesoIdeal + " kg");
     }
 
-    public static double calcularPesoIdeal(String sexo, double altura, int idade) {
+    public static double calcularPI(String sexo, double altura, int idade) {
         double pesoIdeal = 0;
-        if (sexo.equalsIgnoreCase("M")) { // Para homens
+        if (sexo.equalsIgnoreCase("M")) { 
             if (altura > 1.70) {
                 if (idade <= 20) {
                     pesoIdeal = 72.7 * altura - 58;
@@ -35,7 +35,7 @@ public class Exercicio23 {
                     pesoIdeal = 72.7 * altura - 58;
                 }
             }
-            } else if (sexo.equalsIgnoreCase("F")) { // Para mulheres
+            } else if (sexo.equalsIgnoreCase("F")) { 
                 if (altura > 1.50) {
                     if (idade >= 35) {
                         pesoIdeal = 62.1 * altura - 45;

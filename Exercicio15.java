@@ -9,47 +9,55 @@ public class Exercicio15 {
         //(álcool – 25%, gasolina– 21% ou diesel –14%).
         // Com valor do veículo zero encerra entrada de dados. Informe total dedesconto e total pago pelos clientes.
 
-        double totalDesconto = 0;
-        double totalPagoClientes = 0;
+        double descontototal = 0;
+        double totalclientes = 0;
 
         while (true) {
-            String tipoCombustivel = Prompt.lerLinha("Digite o tipo de combustível (álcool, gasolina, diesel) ou '0' para encerrar: ");
+            String combustivel = Prompt.lerLinha("Digite o tipo de combustível (álcool, gasolina, diesel) ou '0' para encerrar: ");
 
-            if (tipoCombustivel.equalsIgnoreCase("álcool") || tipoCombustivel.equalsIgnoreCase("gasolina") || tipoCombustivel.equalsIgnoreCase("diesel")) {
-                if (tipoCombustivel.equalsIgnoreCase("álcool")) {
-                    calcularDesconto(0.25, totalDesconto, totalPagoClientes);
-                } else if (tipoCombustivel.equalsIgnoreCase("gasolina")) {
-                    calcularDesconto(0.21, totalDesconto, totalPagoClientes);
-                } else { // Combustível do tipo Diesel
-                    calcularDesconto(0.14, totalDesconto, totalPagoClientes);
+            if (combustivel.equalsIgnoreCase("álcool") || combustivel.equalsIgnoreCase("gasolina") || combustivel.equalsIgnoreCase("diesel")) {
+                if (combustivel.equalsIgnoreCase("álcool")) {
+
+                    CalcularDesconto(0.25, descontototal, totalclientes);
+
+                } else if (combustivel.equalsIgnoreCase("gasolina")) {
+
+                    CalcularDesconto(0.21, descontototal, totalclientes);
+
+                } else { 
+
+                    CalcularDesconto(0.14, descontototal, totalclientes);
                 }
-            } else if (tipoCombustivel.equals("0")) {
+
+            } else if (combustivel.equals("0")) {
+                
                 System.out.println("Encerrando entrada de dados.");
                 break;
+    
             } else {
                 System.out.println("Tipo de combustível inválido. Tente novamente.");
             }
         }
 
-        System.out.println("Total de desconto: " + totalDesconto);
-        System.out.println("Total pago pelos clientes: " + totalPagoClientes);
+        System.out.println("Total de desconto: " + descontototal);
+        System.out.println("Total pago pelos clientes: " + totalclientes);
     }
 
-    public static void calcularDesconto(double percentualDesconto, double totalDesconto, double totalPagoClientes) {
-        double valorVeiculo = Prompt.lerDecimal("Digite o valor do veículo: ");
+    public static void CalcularDesconto(double percentualdesconto, double descontototal, double totalclientes) {
+        double veiculo = Prompt.lerDecimal("Digite o valor do veículo: ");
 
-        if (valorVeiculo == 0) {
+        if (veiculo == 0) {
             System.out.println("Valor do veículo zero. Encerrando entrada de dados.");
             return;
         }
 
-        double desconto = valorVeiculo * percentualDesconto;
-        double valorAPagar = valorVeiculo - desconto;
+        double desconto = veiculo * percentualdesconto;
+        double valorapagar = veiculo - desconto;
 
         System.out.println("Desconto: " + desconto);
-        System.out.println("Valor a ser pago pelo cliente: " + valorAPagar);
+        System.out.println("Valor a ser pago pelo cliente: " + valorapagar);
 
-        totalDesconto += desconto;
-        totalPagoClientes += valorAPagar;
+        descontototal += desconto;
+        totalclientes += valorapagar;
     }
 }

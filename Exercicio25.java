@@ -9,29 +9,29 @@ public class Exercicio25 {
     //RImprima o nome do estudante, com o seu número, nota final e classificação.
 
 
-    String nomeEstudante = Prompt.lerLinha("Digite o nome do estudante: ");
-    int numeroMatricula = Prompt.lerInteiro("Digite o número de matrícula do estudante: ");
-    double notaLaboratorio = Prompt.lerDecimal("Digite a nota do trabalho de laboratório (0 a 10): ");
-    double notaSemestral = Prompt.lerDecimal("Digite a nota da avaliação semestral (0 a 10): ");
-    double notaExameFinal = Prompt.lerDecimal("Digite a nota do exame final (0 a 10): ");
+    String nome = Prompt.lerLinha("Digite o nome do estudante: ");
+    int matricula = Prompt.lerInteiro("Digite o número de matrícula do estudante: ");
+    double notalaboratorio = Prompt.lerDecimal("Digite a nota do trabalho de laboratório (0 a 10): ");
+    double notasemestral = Prompt.lerDecimal("Digite a nota da avaliação semestral (0 a 10): ");
+    double notaexame = Prompt.lerDecimal("Digite a nota do exame final (0 a 10): ");
 
-    double notaFinal = CalcularNotaFinal(notaLaboratorio, notaSemestral, notaExameFinal);
+    double notafinal = NotaFinal(notalaboratorio, notasemestral, notaexame);
 
-    String classificacao = classificarEstudante(notaFinal);
+    String classificacao = Classificacao(notafinal);
 
-    System.out.println("Nome do estudante: " + nomeEstudante);
-    System.out.println("Número de matrícula: " + numeroMatricula);
-    System.out.println("Nota final: " + notaFinal);
+    System.out.println("Nome do estudante: " + nome);
+    System.out.println("Número de matrícula: " + matricula);
+    System.out.println("Nota final: " + notafinal);
     System.out.println("Classificação: " + classificacao);
     }
 
-    public static double CalcularNotaFinal(double notaLaboratorio, double notaSemestral, double notaExameFinal) {
+    public static double NotaFinal(double notaLaboratorio, double notaSemestral, double notaExameFinal) {
     
     double notaFinal = (notaLaboratorio * 2 + notaSemestral * 3 + notaExameFinal * 5) / 10;
         return notaFinal;
     }
 
-    public static String classificarEstudante(double notaFinal) {
+    public static String Classificacao(double notaFinal) {
      
         if (notaFinal >= 8 && notaFinal <= 10) {
             return "A";
