@@ -14,21 +14,9 @@ public class Exercicio19 {
     int lado2 = Prompt.lerInteiro("Digite o comprimento do segundo lado: ");
     int lado3 = Prompt.lerInteiro("Digite o comprimento do terceiro lado: ");
 
-    if (Triangulo(lado1, lado2, lado3)) {
-        if (lado1 == lado2 && lado2 == lado3) {
-            System.out.println("Os lados formam um triângulo equilátero.");
-        } else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3) {
-            System.out.println("Os lados formam um triângulo isósceles.");
-        } else {
-            System.out.println("Os lados formam um triângulo escaleno.");
-        }
-    } else {
-        System.out.println("Os lados não formam um triângulo.");
-    }
-    }
+    Triangulo19 triangulo = new Triangulo19(lado1, lado2, lado3);
 
-    public static boolean Triangulo(int lado1, int lado2, int lado3) {
-     
-    return (lado1 + lado2 > lado3) && (lado1 + lado3 > lado2) && (lado2 + lado3 > lado1);
+    System.out.println("Os lados formam um triângulo " + triangulo.tipoTriangulo());
+    
     }
 }        
