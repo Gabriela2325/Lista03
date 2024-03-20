@@ -11,10 +11,8 @@ public class Exercicio18 {
     String sexo = Prompt.lerLinha("Digite o sexo do funcionário (M para masculino, F para feminino): ");
     double salarioFixo = Prompt.lerDecimal("Digite o salário fixo do funcionário: ");
 
-    // Criando o objeto Funcionario18 com os dados fornecidos
     Funcionario18 funcionario = new Funcionario18(nome, idade, sexo, salarioFixo);
 
-    // Calculando e exibindo o salário líquido acrescido do abono
     System.out.println(funcionario.toString());
     }
 }
