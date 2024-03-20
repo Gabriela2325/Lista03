@@ -9,26 +9,9 @@ public class Exercicio20 {
     //Nível 1 R$12,00 por hora/aulaProfessor Nível 2 R$17,00 por hora/aulaProfessor
     // Nível 3 R$25,00 por hora/aula
 
-    int htrabalhadas = 40;
-    int nivelp = 2;
-    double salario;
-    
-    switch (nivelp) {
-        case 1:
-            salario = htrabalhadas * 12.00;
-            break;
-        case 2:
-            salario = htrabalhadas * 17.00;
-            break;
-        case 3:
-            salario = htrabalhadas * 25.00;
-            break;
-        default:
-            System.out.println("Nível de professor inválido.");
-            return;
-    }
+    Professor20 professor = new Professor20(40, 2);
 
-    System.out.println("O salário do professor é: R$" + salario);
+    System.out.println(professor.toString());
 }
 
 }        
