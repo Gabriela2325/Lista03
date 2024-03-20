@@ -9,34 +9,12 @@ public class Exercicio18 {
     String nome = Prompt.lerLinha("Digite o nome do funcionário: ");
     int idade = Prompt.lerInteiro("Digite a idade do funcionário: ");
     String sexo = Prompt.lerLinha("Digite o sexo do funcionário (M para masculino, F para feminino): ");
-    double fixo = Prompt.lerDecimal("Digite o salário fixo do funcionário: ");
+    double salarioFixo = Prompt.lerDecimal("Digite o salário fixo do funcionário: ");
 
-    double abono = Calcularabono(idade, sexo);
+    // Criando o objeto Funcionario18 com os dados fornecidos
+    Funcionario18 funcionario = new Funcionario18(nome, idade, sexo, salarioFixo);
 
-    double liquido = fixo + abono;
-
-    System.out.println("Nome do funcionário: " + nome);
-    System.out.println("Salário líquido acrescido do abono: " + liquido);
+    // Calculando e exibindo o salário líquido acrescido do abono
+    System.out.println(funcionario.toString());
     }
-
-    public static double Calcularabono(int idade, String sexo) {
-        double abono = 0;
-
-        if (sexo.equalsIgnoreCase("M")) {
-            if (idade >= 30) {
-                abono = 100;
-            } else {
-                abono = 50;
-            }
-        } else if (sexo.equalsIgnoreCase("F")) {
-            if (idade >= 30) {
-                abono = 200;
-            } else {
-                abono = 80;
-            }
-        }
-
-        return abono;
-
-    }        
 }
