@@ -2,9 +2,9 @@ public class Veiculo15 {
     private String tipoCombustivel;
     private double valorVeiculo;
 
-    public Veiculo15(String tipoCombustivel, double valorVeiculo) {
-        this.tipoCombustivel = tipoCombustivel;
-        this.valorVeiculo = valorVeiculo;
+    public Veiculo15(String tipoCombustivelParam, double valorVeiculoParam) {
+        tipoCombustivel = tipoCombustivelParam;
+        valorVeiculo = valorVeiculoParam;
     }
 
     public Veiculo15() {
@@ -14,16 +14,16 @@ public class Veiculo15 {
         return tipoCombustivel;
     }
 
-    public void setTipoCombustivel(String tipoCombustivel) {
-        this.tipoCombustivel = tipoCombustivel;
+    public void setTipoCombustivel(String tipoCombustivelParam) {
+        tipoCombustivel = tipoCombustivelParam;
     }
 
     public double getValorVeiculo() {
         return valorVeiculo;
     }
 
-    public void setValorVeiculo(double valorVeiculo) {
-        this.valorVeiculo = valorVeiculo;
+    public void setValorVeiculo(double valorVeiculoParam) {
+        valorVeiculo = valorVeiculoParam;
     }
 
     public double calcularDesconto() {
